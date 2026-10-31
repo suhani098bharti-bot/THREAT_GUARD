@@ -1,0 +1,9 @@
+timestamp,source_ip,destination_ip,username,event_type,status,port,protocol,message
+2026-10-31 09:00:10,192.168.1.15,10.0.0.2,sec_ops,user_auth,SUCCESS,443,TCP,MFA login validated successfully for sec_ops
+2026-10-31 09:02:11,198.51.100.150,10.0.0.2,finance_admin,login_attempt,FAILED,443,TCP,Invalid credential challenge from untrusted subnet
+2026-10-31 09:02:14,198.51.100.150,10.0.0.2,finance_admin,login_attempt,FAILED,443,TCP,Bad password for user finance_admin
+2026-10-31 09:02:18,198.51.100.150,10.0.0.2,finance_admin,login_attempt,FAILED,443,TCP,Repeated bad password challenge
+2026-10-31 09:02:22,198.51.100.150,10.0.0.2,root,login_attempt,FAILED,443,TCP,Authentication rejection for account root
+2026-10-31 09:02:26,198.51.100.150,10.0.0.2,admin,login_attempt,FAILED,443,TCP,Authentication rejection for user admin
+2026-10-31 09:02:30,198.51.100.150,10.0.0.2,support,login_attempt,FAILED,443,TCP,Authentication rejection for user support
+2026-10-31 09:05:00,192.168.1.20,10.0.0.2,emma,login,SUCCESS,443,TCP,Single Sign-On SAML token accepted for emma

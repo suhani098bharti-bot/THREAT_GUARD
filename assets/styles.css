@@ -1,0 +1,197 @@
+/* ============================================================
+   ThreatGuard SOC Modern Dark Theme Stylesheet
+   Designed for High-Contrast Cybersecurity Operations Center
+============================================================ */
+
+/* Global container styling */
+.stApp {
+    background-color: #0B0F19;
+    color: #E2E8F0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Header & Banner Branding */
+.threatguard-header {
+    background: linear-gradient(135deg, rgba(19, 27, 46, 0.95) 0%, rgba(15, 23, 42, 0.95) 100%);
+    border: 1px solid rgba(0, 210, 255, 0.25);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.threatguard-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    background: linear-gradient(90deg, #00D2FF 0%, #3B82F6 50%, #9333EA 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 6px;
+}
+
+.threatguard-subtitle {
+    font-size: 0.95rem;
+    color: #94A3B8;
+    margin-bottom: 0px;
+}
+
+/* Metric KPI Cards */
+.kpi-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.metric-card {
+    background: linear-gradient(180deg, #131B2E 0%, #0F172A 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 18px 20px;
+    transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    position: relative;
+    overflow: hidden;
+}
+
+.metric-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(0, 210, 255, 0.4);
+    box-shadow: 0 8px 20px rgba(0, 210, 255, 0.15);
+}
+
+.metric-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #00D2FF, #3B82F6);
+}
+
+.metric-card.critical::before {
+    background: linear-gradient(90deg, #FF4B4B, #DC2626);
+}
+
+.metric-card.high::before {
+    background: linear-gradient(90deg, #FFA500, #F59E0B);
+}
+
+.metric-card.success::before {
+    background: linear-gradient(90deg, #10B981, #059669);
+}
+
+.metric-card.pending::before {
+    background: linear-gradient(90deg, #9333EA, #7C3AED);
+}
+
+.metric-label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #94A3B8;
+    margin-bottom: 8px;
+}
+
+.metric-value {
+    font-size: 2.1rem;
+    font-weight: 800;
+    color: #F8FAFC;
+    line-height: 1.1;
+    margin-bottom: 4px;
+}
+
+.metric-sub {
+    font-size: 0.75rem;
+    color: #64748B;
+}
+
+/* Sidebar Custom Styling */
+section[data-testid="stSidebar"] {
+    background-color: #0E1424;
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+section[data-testid="stSidebar"] .stMarkdown h1,
+section[data-testid="stSidebar"] .stMarkdown h2,
+section[data-testid="stSidebar"] .stMarkdown h3 {
+    color: #F8FAFC;
+}
+
+/* Card Box */
+.soc-card {
+    background: #131B2E;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.soc-card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #F1F5F9;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Disclaimer Banner */
+.academic-badge {
+    display: inline-block;
+    background: rgba(59, 130, 246, 0.15);
+    border: 1px solid rgba(59, 130, 246, 0.4);
+    color: #93C5FD;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* Severity Tag Badges */
+.badge-critical {
+    background-color: rgba(255, 75, 75, 0.15);
+    color: #FF4B4B;
+    border: 1px solid rgba(255, 75, 75, 0.4);
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 0.75rem;
+}
+
+.badge-high {
+    background-color: rgba(255, 165, 0, 0.15);
+    color: #FFA500;
+    border: 1px solid rgba(255, 165, 0, 0.4);
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 0.75rem;
+}
+
+.badge-medium {
+    background-color: rgba(244, 208, 63, 0.15);
+    color: #F4D03F;
+    border: 1px solid rgba(244, 208, 63, 0.4);
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 0.75rem;
+}
+
+.badge-low {
+    background-color: rgba(0, 210, 255, 0.15);
+    color: #00D2FF;
+    border: 1px solid rgba(0, 210, 255, 0.4);
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 0.75rem;
+}
