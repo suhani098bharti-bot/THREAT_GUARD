@@ -461,7 +461,9 @@ def get_severity_distribution_data(db_path: Optional[Union[str, Path]] = None) -
         return pd.read_sql_query(query, conn)
 
 
-def get_category_distribution_data(db_path: Optional[Union[str, Path]] = None) -> pd.DataFrame:
+def get_attack_category_distribution(
+    db_path: Optional[Union[str, Path]] = None
+) -> pd.DataFrame:
     """Count incidents by cyber threat category."""
     with get_db_connection(db_path) as conn:
         query = """
@@ -471,6 +473,10 @@ def get_category_distribution_data(db_path: Optional[Union[str, Path]] = None) -
             ORDER BY count DESC
         """
         return pd.read_sql_query(query, conn)
+
+
+# Alias for backward compatibility
+get_category_distribution_data = get_attack_category_distribution
 
 
 def get_incident_status_data(db_path: Optional[Union[str, Path]] = None) -> pd.DataFrame:
